@@ -5,11 +5,13 @@ import org.junit.Test;
 public class LibraryTest {
   Library library;
   Book book;
+  Person person;
 
   @Before
   public void before() {
     library = new Library("Edinburgh Library");
     book = new Book();
+    person = new Person("Ciaran");
   }
 
   @Test
@@ -29,6 +31,17 @@ public class LibraryTest {
       library.add(book);
     }
     assertEquals(true, library.isLibraryFull());
+  }
+
+  @Test
+  public void hasName() {
+    assertEquals("Ciaran", person.getName());
+  }
+
+  @Test
+  public void loanBooktoPerson() {
+    person.loan(book);
+    assertEquals(1, person.bookCount());
   }
 
 }
