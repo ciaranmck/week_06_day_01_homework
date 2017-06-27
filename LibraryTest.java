@@ -38,10 +38,24 @@ public class LibraryTest {
     assertEquals("Ciaran", person.getName());
   }
 
+  // @Test
+  // public void loanBooktoPerson() {
+  //   person.loan(book);
+  //   assertEquals(1, person.bookCount());
+  // }
+
   @Test
-  public void loanBooktoPerson() {
-    person.loan(book);
+  public void withdrawBook() {
+    for (int i = 0; i <= 1; i++) {
+      person.withdrawBook();
+    }
     assertEquals(1, person.bookCount());
   }
+
+
+
+
+
+
 
 }
